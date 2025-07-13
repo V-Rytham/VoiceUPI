@@ -1,0 +1,162 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dark_gradient"
+    android:padding="0dp">
+
+    <!-- Top Header -->
+    <RelativeLayout
+        android:id="@+id/top_layer"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_alignParentTop="true"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="32dp"
+        android:paddingBottom="16dp"
+        android:background="@drawable/bg_top_glass"
+        android:elevation="6dp">
+
+        <TextView
+            android:id="@+id/app_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VoicePay"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium" />
+
+        <TextView
+            android:id="@+id/header_subtitle"
+            android:layout_below="@id/app_title"
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome back, Rytham 👋"
+            android:textColor="#DDDDDD"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif" />
+
+        <ImageButton
+            android:id="@+id/header_icon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/ic_notifications"
+            android:background="@android:color/transparent"
+            android:contentDescription="Notifications"
+            android:tint="#FFFFFF" />
+    </RelativeLayout>
+
+    <!-- Mic FAB in center -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_mic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:contentDescription="Voice Input"
+        android:src="@android:drawable/ic_btn_speak_now"
+        app:backgroundTint="#2196F3"
+        app:rippleColor="#FF4081"
+        app:maxImageSize="56dp"
+        app:fabSize="normal" />
+
+    <!-- Unified footer container -->
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/footer_black_curved"
+        android:elevation="10dp">
+
+        <!-- History button and label -->
+        <LinearLayout
+            android:id="@+id/layout_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="36dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/btn_history"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_history"
+                android:tint="#FFFFFF"
+                android:contentDescription="History" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="History"
+                android:textColor="#CCCCCC"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif" />
+        </LinearLayout>
+
+        <!-- Settings button and label -->
+        <LinearLayout
+            android:id="@+id/layout_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginEnd="36dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/btn_settings"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_settings"
+                android:tint="#FFFFFF"
+                android:contentDescription="Settings" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:textColor="#CCCCCC"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif" />
+        </LinearLayout>
+
+        <!-- QR button INSIDE footer -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_center_circle"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="37dp"
+            android:backgroundTint="#FFB300"
+            android:clickable="true"
+            android:layout_centerInParent="true"
+            android:elevation="16dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_qr_code_white"
+            app:maxImageSize="40dp"
+            app:tint="#FFFFFF" />
+    </RelativeLayout>
+
+    <!-- Label below QR button (outside footer but relative to it) -->
+    <TextView
+        android:id="@+id/label_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scan"
+        android:textSize="12sp"
+        android:textColor="#EEEEEE"
+        android:fontFamily="sans-serif"
+        android:layout_above="@id/footer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp" />
+</RelativeLayout>

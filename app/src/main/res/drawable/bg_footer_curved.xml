@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Black footer background -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#000000" />
+        </shape>
+    </item>
+
+    <!-- Concave arc at top center: oval shape with background color -->
+    <item android:top="-56dp">  <!-- Raise this oval 56dp above footer top -->
+        <shape android:shape="oval">
+            <solid android:color="#F5F5F5" /> <!-- Your Activity background color -->
+        </shape>
+        <padding android:left="140dp" android:right="140dp" />
+        <!-- Adjust left/right padding to horizontally center the oval -->
+    </item>
+
+</layer-list>

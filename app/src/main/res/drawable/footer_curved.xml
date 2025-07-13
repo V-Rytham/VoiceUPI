@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <solid android:color="#000000" />
+
+    <!-- Top concave arc using path -->
+    <path
+        android:pathData="M0,56
+                          A56,56 0 0 1 112,56
+                          L112,95
+                          L0,95
+                          Z"
+        android:fillColor="#F5F5F5" /> <!-- background color to cut the curve -->
+</shape>
